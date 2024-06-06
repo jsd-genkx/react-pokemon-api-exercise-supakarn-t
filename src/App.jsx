@@ -1,6 +1,6 @@
-import PokemonBasicFetch from "./components/PokemonBasicFetch";
-import PokemonFetch from "./components/PokemonFetch";
-// import PokemonBasicFetchAxios from "./components/PokemonBasicFetchAxios";
+// import PokemonBasicFetch from "./components/PokemonBasicFetch";
+// import PokemonFetch from "./components/PokemonFetch";
+import PokemonBasicFetchAxios from "./components/PokemonBasicFetchAxios";
 // import PokemonFetchAxios from "./components/PokemonFetchAxios";
 // import PokemonSearchFetch from "./components/PokemonSearchFetch";
 
@@ -10,10 +10,11 @@ const App = () => {
 			<h1>Pokémon List</h1>
 
 			{/* Fetch API */}
-			<PokemonBasicFetch />
-			<PokemonFetch />
+			{/* <PokemonBasicFetch />
+			<PokemonFetch /> */}
+
 			{/* Axios */}
-			{/* <PokemonBasicFetchAxios /> */}
+			<PokemonBasicFetchAxios />
 			{/* <PokemonFetchAxios /> */}
 			{/* Bonus Code Example */}
 			{/* <PokemonSearchFetch /> */}
