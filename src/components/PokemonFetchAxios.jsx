@@ -32,7 +32,7 @@ const PokemonFetchAxios = () => {
 			const response = await axios.get(
 				"https://pokeapi.co/api/v2/pokemon?limit=20"
 			);
-			const data = response.data.results;
+			const data = await response.data.results;
 
 			// Sequentially fetch details for each Pokémon
 			const pokemonData = [];

@@ -25,39 +25,36 @@ const typeColors = {
 const PokemonFetch = () => {
 	const [pokemonList, setPokemonList] = useState([]);
 
-	useEffect(() => {
-		const fetchAllPokemon = async () => {
-			try {
-				// Fetch initial list of Pokémon
-				const response = await fetch(
-					"https://pokeapi.co/api/v2/pokemon?limit=20"
-				);
+	const fetchAllPokemon = async () => {
+		try {
+			// Fetch initial list of Pokémon
+			const response = await fetch(
+				"https://pokeapi.co/api/v2/pokemon?limit=20"
+			);
 
-				const data = await response.json();
+			const data = await response.json();
 
-				// Sequentially fetch details for each Pokémon
-				const pokemonData = [];
-				for (const pokemon of data.results) {
-					const PokemonUrl = await fetch(pokemon.url);
-					const pokemonDetail = await PokemonUrl.json();
+			// Sequentially fetch details for each Pokémon
+			const pokemonData = [];
+			for (const pokemon of data.results) {
+				const PokemonUrl = await fetch(pokemon.url);
+				const pokemonDetail = await PokemonUrl.json();
 
-					pokemonData.push(pokemonDetail);
-				}
-				console.log(pokemonData);
-
-				setPokemonList(pokemonData);
-
-				console.log(pokemonList);
-
-				// Update the state with the detailed Pokémon data
-			} catch (error) {
-				console.error("Failed to fetch Pokémon:", error);
+				pokemonData.push(pokemonDetail);
 			}
-		};
 
+			setPokemonList(pokemonData);
+
+			// Update the state with the detailed Pokémon data
+		} catch (error) {
+			console.error("Failed to fetch Pokémon:", error);
+		}
+	};
+
+	useEffect(() => {
 		// invoke function
 		fetchAllPokemon();
-	}, [pokemonList]);
+	}, []);
 
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 rounded-xl ">
