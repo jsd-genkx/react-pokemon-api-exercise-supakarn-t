@@ -1,7 +1,7 @@
 // import PokemonBasicFetch from "./components/PokemonBasicFetch";
 // import PokemonFetch from "./components/PokemonFetch";
 import PokemonBasicFetchAxios from "./components/PokemonBasicFetchAxios";
-// import PokemonFetchAxios from "./components/PokemonFetchAxios";
+import PokemonFetchAxios from "./components/PokemonFetchAxios";
 // import PokemonSearchFetch from "./components/PokemonSearchFetch";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
 
 			{/* Axios */}
 			<PokemonBasicFetchAxios />
-			{/* <PokemonFetchAxios /> */}
+			<PokemonFetchAxios />
 			{/* Bonus Code Example */}
 			{/* <PokemonSearchFetch /> */}
 			{/* Bonus Code Challenge: refactor PokemonSearchFetch to use Axios */}

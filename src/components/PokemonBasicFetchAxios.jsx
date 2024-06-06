@@ -13,7 +13,6 @@ const PokemonBasicFetchAxios = () => {
 				"https://pokeapi.co/api/v2/pokemon?limit=20"
 			);
 
-			console.log(response);
 			// handle data
 			setPokemonData(response.data.results);
 		} catch (error) {
