@@ -1,8 +1,9 @@
 // import PokemonBasicFetch from "./components/PokemonBasicFetch";
 // import PokemonFetch from "./components/PokemonFetch";
+// import PokemonSearchFetch from "./components/PokemonSearchFetch";
 import PokemonBasicFetchAxios from "./components/PokemonBasicFetchAxios";
 import PokemonFetchAxios from "./components/PokemonFetchAxios";
-import PokemonSearchFetch from "./components/PokemonSearchFetch";
+import PokemonSearchFetchAxios from "./components/PokemonSearchFetchAxios";
 
 const App = () => {
 	return (
@@ -10,20 +11,21 @@ const App = () => {
 			<h1>Pokémon List</h1>
 
 			{/* Fetch API */}
-			{/* <PokemonBasicFetch />
-			<PokemonFetch /> */}
+			{/* <PokemonBasicFetch /> */}
+			{/* <PokemonFetch /> */}
+
+			{/* Bonus Code Example */}
+			{/* <PokemonSearchFetch /> */}
 
 			{/* Axios */}
 			<PokemonBasicFetchAxios />
 
 			<div className="flex items-start gap-16 w-11/12">
-				{/* Bonus Code Example */}
-				<PokemonSearchFetch />
+				{/* Bonus Code Challenge: refactor PokemonSearchFetch to use Axios */}
+				<PokemonSearchFetchAxios />
 
 				<PokemonFetchAxios />
 			</div>
-
-			{/* Bonus Code Challenge: refactor PokemonSearchFetch to use Axios */}
 		</div>
 	);
 };
